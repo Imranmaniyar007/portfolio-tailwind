@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imran Maniyar - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom animations */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink {
+            50% { border-color: transparent }
+        }
+        
+        .typing-effect {
+            overflow: hidden;
+            border-right: 3px solid #3b82f6;
+            white-space: nowrap;
+            animation: typing 3s steps(40, end), blink 1s infinite;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white dark:bg-gray-800 shadow-lg z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">Portfolio</div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors dark:text-gray-300">Home</a>
+                    <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors dark:text-gray-300">About</a>
+                    <a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors dark:text-gray-300">Projects</a>
+                    <a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors dark:text-gray-300">Contact</a>
+                    <button id="theme-toggle" class="ml-4 p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+                        <i class="fas fa-moon dark:hidden text-gray-600"></i>
+                        <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                    </button>
+                </div>
+                <div class="md:hidden flex items-center space-x-4">
+                    <button id="theme-toggle-mobile" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+                        <i class="fas fa-moon dark:hidden text-gray-600"></i>
+                        <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#home" class="block py-2 hover:text-blue-600 dark:hover:text-blue-400 dark:text-gray-300">Home</a>
+                <a href="#about" class="block py-2 hover:text-blue-600 dark:hover:text-blue-400 dark:text-gray-300">About</a>
+                <a href="#projects" class="block py-2 hover:text-blue-600 dark:hover:text-blue-400 dark:text-gray-300">Projects</a>
+                <a href="#contact" class="block py-2 hover:text-blue-600 dark:hover:text-blue-400 dark:text-gray-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="gradient-bg min-h-screen flex items-center justify-center text-white">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-8">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlraKbXWE3qHSSgsApTp7dhhgBoF-yJjG_sg&s" alt="Imran Maniyar" class="w-48 h-48 rounded-full mx-auto mb-8 border-4 border-white shadow-2xl object-cover">
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">Imran Maniyar</h1>
+            <p class="text-xl md:text-2xl mb-6 typing-effect">B.E Computer Science Student & Aspiring Developer</p>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">"Passionate about learning new technologies and building innovative solutions"</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#about" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                    Learn More About Me
+                </a>
+                <a href="#" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                    <i class="fas fa-download mr-2"></i>Download Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 bg-white dark:bg-gray-800 transition-colors duration-300">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800 dark:text-gray-200">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-blue-600 dark:text-blue-400">My Story</h3>
+                    <p class="text-lg mb-6 leading-relaxed text-gray-700 dark:text-gray-300">
+                        Hello! I'm Imran Maniyar, a dedicated B.E Computer Science student with an insatiable curiosity for technology and innovation. My journey in the world of programming began with a simple "Hello World" program, and since then, I've been captivated by the endless possibilities that code can create.
+                    </p>
+                    <p class="text-lg mb-6 leading-relaxed text-gray-700 dark:text-gray-300">
+                        I believe in continuous learning and staying updated with the latest technological trends. My goal is to contribute to meaningful projects that can make a positive impact on society while constantly expanding my skill set and knowledge base.
+                    </p>
+                    <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+                        When I'm not coding, you'll find me exploring new technologies, reading tech blogs, or working on personal projects that challenge my creativity and problem-solving abilities.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-blue-600 dark:text-blue-400">Skills & Technologies</h3>
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 text-center card-hover">
+                            <i class="fab fa-html5 text-4xl text-orange-500 mb-2"></i>
+                            <p class="font-semibold text-gray-800 dark:text-gray-200">HTML5</p>
+                        </div>
+                        <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 text-center card-hover">
+                            <i class="fab fa-css3-alt text-4xl text-blue-500 mb-2"></i>
+                            <p class="font-semibold text-gray-800 dark:text-gray-200">CSS3</p>
+                        </div>
+                        <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 text-center card-hover">
+                            <i class="fab fa-js-square text-4xl text-yellow-500 mb-2"></i>
+                            <p class="font-semibold text-gray-800 dark:text-gray-200">JavaScript</p>
+                        </div>
+                        <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 text-center card-hover">
+                            <i class="fab fa-react text-4xl text-blue-400 mb-2"></i>
+                            <p class="font-semibold text-gray-800 dark:text-gray-200">React</p>
+                        </div>
+                        <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 text-center card-hover">
+                            <i class="fab fa-python text-4xl text-green-500 mb-2"></i>
+                            <p class="font-semibold text-gray-800 dark:text-gray-200">Python</p>
+                        </div>
+                        <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 text-center card-hover">
+                            <i class="fab fa-git-alt text-4xl text-red-500 mb-2"></i>
+                            <p class="font-semibold text-gray-800 dark:text-gray-200">Git</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Education Timeline -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-semibold mb-8 text-center text-blue-600 dark:text-blue-400">Education</h3>
+                <div class="max-w-3xl mx-auto">
+                    <div class="relative">
+                        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-500 dark:bg-blue-400"></div>
+                        <div class="relative flex items-center mb-8">
+                            <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6 mr-6 w-full md:w-5/12 card-hover">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-4 h-4 bg-blue-500 dark:bg-blue-400 rounded-full mr-4"></div>
+                                    <span class="text-sm text-gray-500 dark:text-gray-400">2021 - Present</span>
+                                </div>
+                                <h4 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">Bachelor of Engineering</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Computer Science</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Currently pursuing B.E in Computer Science with focus on modern software development practices and emerging technologies.</p>
+                            </div>
+                        </div>
+                        <div class="relative flex items-center justify-end">
+                            <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6 ml-6 w-full md:w-5/12 card-hover">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-4 h-4 bg-blue-500 dark:bg-blue-400 rounded-full mr-4"></div>
+                                    <span class="text-sm text-gray-500 dark:text-gray-400">2019 - 2021</span>
+                                </div>
+                                <h4 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">Higher Secondary</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Science Stream</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Completed higher secondary education with Mathematics, Physics, and Chemistry as core subjects.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800 dark:text-gray-200">My Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="https://via.placeholder.com/400x250/3b82f6/ffffff?text=Portfolio+Website" alt="Portfolio Website" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-gray-200">Personal Portfolio</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">A responsive personal portfolio website built with HTML and Tailwind CSS. Features smooth animations, modern design, and mobile-first approach.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full text-sm">HTML</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full text-sm">Tailwind CSS</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full text-sm">JavaScript</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 transition-colors">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                            <a href="#" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 transition-colors">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="https://via.placeholder.com/400x250/10b981/ffffff?text=Todo+App" alt="Todo App" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-gray-200">Task Management App</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">A feature-rich todo application with drag-and-drop functionality, local storage, and clean user interface for managing daily tasks efficiently.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 rounded-full text-sm">JavaScript</span>
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 rounded-full text-sm">CSS</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 transition-colors">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                            <a href="#" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 transition-colors">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="https://via.placeholder.com/400x250/8b5cf6/ffffff?text=Weather+App" alt="Weather App" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-gray-200">Weather Dashboard</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">A responsive weather application that provides real-time weather information with beautiful UI and location-based forecasts.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 rounded-full text-sm">HTML</span>
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 rounded-full text-sm">CSS</span>
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 rounded-full text-sm">API</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 transition-colors">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                            <a href="#" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 transition-colors">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="https://via.placeholder.com/400x250/10b981/ffffff?text=Todo+App" alt="Todo App" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Task Management App</h3>
+                        <p class="text-gray-600 mb-4">A feature-rich todo application with drag-and-drop functionality, local storage, and clean user interface for managing daily tasks efficiently.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">JavaScript</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">CSS</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 transition-colors">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                            <a href="#" class="text-blue-600 hover:text-blue-800 transition-colors">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="https://via.placeholder.com/400x250/8b5cf6/ffffff?text=Weather+App" alt="Weather App" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Weather Dashboard</h3>
+                        <p class="text-gray-600 mb-4">A responsive weather application that provides real-time weather information with beautiful UI and location-based forecasts.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">HTML</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">CSS</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">API</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 transition-colors">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                            <a href="#" class="text-blue-600 hover:text-blue-800 transition-colors">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Get In Touch</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Contact Info -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6 text-blue-600">Let's Connect</h3>
+                        <p class="text-lg mb-8 leading-relaxed">
+                            I'm always excited to discuss new opportunities, collaborate on interesting projects, or simply connect with fellow developers. Feel free to reach out!
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope text-blue-600 text-xl mr-4"></i>
+                                <span class="text-lg">imranmaniyar672@gmail.com</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-graduation-cap text-blue-600 text-xl mr-4"></i>
+                                <span class="text-lg">B.E Computer Science Student</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-map-marker-alt text-blue-600 text-xl mr-4"></i>
+                                <span class="text-lg">Available for Remote Work</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Links -->
+                        <div class="mt-8">
+                            <h4 class="text-xl font-semibold mb-4">Follow Me</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://linkedin.com/in/imran-maniyar-31b618292/" class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition-colors">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="bg-gray-800 text-white p-3 rounded-full hover:bg-gray-900 transition-colors">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="bg-blue-500 text-white p-3 rounded-full hover:bg-blue-600 transition-colors">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-pink-600 text-white p-3 rounded-full hover:bg-pink-700 transition-colors">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div>
+                        <form class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter your name">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter your email">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Your message here..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                                <i class="fas fa-paper-plane mr-2"></i>Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold mb-4">Imran Maniyar</h3>
+                <p class="text-gray-400 mb-6">B.E Computer Science Student | Aspiring Developer</p>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="#home" class="hover:text-blue-400 transition-colors">Home</a>
+                    <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+                    <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
+                    <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+                </div>
+                <div class="border-t border-gray-700 pt-8">
+                    <p class="text-gray-400">© 2024 Imran Maniyar. All rights reserved. | Built with HTML & Tailwind CSS</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+        
+        // Form submission handling
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            document.querySelector('form').reset();
+        });
+        
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
